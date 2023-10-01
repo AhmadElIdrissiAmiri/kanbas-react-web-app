@@ -1,0 +1,47 @@
+/* icons must be red*/
+.fixed-column-content ul li i{
+    color: red; /* Set the color to red */  
+    font-size: 30px; 
+    display: flex;
+    margin-bottom: 5px 10px;
+    padding: 5px 10px;
+   
+}
+.fixed-column-content ul li i.fas.fa-user-circle {
+    color: white; /* Set the color to white for the "Account" icon */
+}
+.sidebar {
+    background-color: black; 
+    width: 75px; 
+    max-width: 85px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.northeastern-image {
+    width: 75px; 
+    max-width: 85px;
+    height: 80px; 
+}
+.fixed-column-content ul li{
+    color: white; 
+    display: flex;
+    flex-direction: column; /* Display icon and text vertically */
+    align-items: center; /* Center the text horizontally */
+    margin-bottom: 5px 10px;
+    padding: 5px 10px;
+   
+}
+.fixed-column-content ul{
+    color: white; 
+    display: flex;
+    flex-direction: column; /* Display icon and text vertically */
+    align-items: center; /* Center the text horizontally */
+    margin-bottom: 5px 10px;
+    padding: 5px 10px;
+   
+}
+
+
