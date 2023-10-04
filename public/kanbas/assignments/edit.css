@@ -1,10 +1,15 @@
-/*First bar*/
-
-.custom-row1{
-height:100vh;
+/*sidebar*/
+.custom-row1 {
+    height: 100vh;
 
 }
 
+.northeasternIMG {
+    width: 100px;
+    max-width: 110px;
+    padding-right: 40px;
+
+}
 
 .custom-col1 {
     background-color: black;
@@ -12,23 +17,19 @@ height:100vh;
     padding: 0px;
     padding-right: 0;
     padding-top: 5px;
-   
+
 
 }
 
-.custom-col2 {
 
-    padding-right: 200px;
-    
 
-}
 
 .custom-row2 {
     width: auto;
     height: 70px;
-    display: flex;
     align-items: center;
     
+
 
 
 }
@@ -47,50 +48,15 @@ height:100vh;
     font-size: 20px;
     text-align: left;
     margin-left: 40px;
-    padding-top: 25px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-bottom: 0;
+    padding-bottom: 0px;
     border: none;
-    border-bottom: RGB(220,220,220) solid 0.5px;
+    border-bottom: RGB(220, 220, 220) solid 0.5px;
     background-color: #fff;
 
 }
 
-.custom-col3 {
-
-    max-width: 200px;
-    float: left;
-}
-
-.custom-col4 {
-
-    margin-right: 25px;
-    margin-left: 25px;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 40px;
-
-}
-
-
-
-
-.styleIcon {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-
-
-
-
-.northeasternIMG {
-    width: 100px;
-    max-width: 110px;
-    padding-right: 40px;
-
-}
 
 .sidebar {
     background-color: black;
@@ -185,10 +151,6 @@ height:100vh;
 
 
 
-
-
-
-
 /*Second bar*/
 .accountNavigation {
     width: 190px;
@@ -197,17 +159,15 @@ height:100vh;
     padding: 10px 0;
     list-style-type: none;
     text-align: left;
-
-
-
 }
 
 .accountNavigation ul li {
     text-decoration: none;
-    color: red;
+    color: black;
     display: block;
-    padding: 5px 10px;
+    padding: 2px 5px;
     margin-bottom: 10px;
+    font-size: 12px;
 
 }
 
@@ -227,78 +187,38 @@ height:100vh;
 
 }
 
-.user_icon p a {
 
-    text-decoration: none;
-    color: red;
-    display: inline-block;
-    margin: none;
-    padding: none;
 
+
+.breadcrumb a{
+    text-decoration: none; 
+    color: red; 
+    background-color: transparent; 
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+    font-size: 25px;
 }
-
-.user_icon i {
-
-    font-size: 180px;
-    padding-right: 100px;
-    display: flex;
-
-}
-
-.user_icon label {
-    font-size: 30px;
-
-}
-
-.links_icons p i {
-
-    font-size: 20px;
-
-    display: inline-block;
-
-}
-
-.links_icons label {
-    font-size: 30px;
-
-}
-
-.links_icons a {
-
-    text-decoration: none;
-    color: red;
-    display: inline-block;
-    margin: none;
-    padding: none;
+.breadcrumb-item{
+    text-decoration: none; 
+    color: red; 
+    background-color: transparent; 
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    text-align: left;
 }
 
 
+.custom-row4 {
 
+    border: none;
+    
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    width: 900px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 

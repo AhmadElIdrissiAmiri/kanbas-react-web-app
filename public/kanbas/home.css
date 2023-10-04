@@ -150,13 +150,14 @@
 
 
 /*Second bar*/
-.accountNavigation {
+.accountNavigation  {
     width: 190px;
     max-width: 200px;
     margin-bottom: 10px;
     padding: 10px 0;
     list-style-type: none;
     text-align: left;
+
 }
 
 .accountNavigation ul li {
@@ -169,28 +170,22 @@
 
 }
 
-.accountNavigation ul li a {
+
+.accountNavigation ul li a.accountNavigationSelected{
     text-decoration: none;
-    color: red;
+    color:black;
     font-size: 18px;
-
-}
-
-.accountNavigationSelected {
-    text-decoration: none;
-    color: black;
     border-left: 3px solid transparent;
     border-left-color: black;
     padding-left: 8px;
-}
 
-.accountNavigationUNSelected {
+}
+.accountNavigation ul li a.accountNavigationUNSelected{
     text-decoration: none;
-    color: red;
+    color:red;
+    font-size: 18px;
+
 }
-
-
-
 
 .breadcrumb a{
     text-decoration: none; 
@@ -282,8 +277,32 @@
     color: red;
 }
 
+.custom-col5{
 
+    max-width: 230px;
+    
+}
+.list-group li a{
+    text-decoration: none;
+    color:red;
+    margin-left: 50px;
+    margin-right: 0px;
 
+    
+}
+.list-group-item i:nth-child(2) {
+    
+    
+    padding-right: 15px;
+ 
+     
+ }
+ 
+ 
+ .list-group-item {
+    border-left: 10px solid green;
+    padding-right: 10px;
+}
 
 
 

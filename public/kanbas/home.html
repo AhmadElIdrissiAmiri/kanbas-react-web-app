@@ -16,7 +16,7 @@
     <div class="container-fluid">
         <div class="row custom-row1">
             <!-- First Column -->
-            <div class="col custom-col1 ">
+            <div class="col custom-col1 d-none d-xl-block ">
                 <div class="sidebar">
                     <ul>
                         <a class="sidebar-unselected" href="#">
@@ -27,7 +27,7 @@
                                 Account</li>
                         </a>
 
-                        <a class="sidebar-unselected" href="#">
+                        <a class="sidebar-unselected" href="./Dashboard/dashboard.html">
                             <li> <i class="fas fa-tachometer-alt"></i>
                                 Dashboard</li>
                         </a>
@@ -65,7 +65,7 @@
 
 
             <!-- second Column -->
-            <div class="col custom-col2">
+            <div class="col custom-col2 ">
                 <!-- First row inside the second column -->
                 <div class="row custom-row2">
 
@@ -85,18 +85,18 @@
                     <br />
                 </div>
                 <div class="row custom-row3">
-                    <div class="col custom-col3">
+                    <div class="col custom-col3 d-none d-xl-block">
                         <div class="accountNavigation">
                             <i style="font-size:small;  margin-bottom: 20px; margin-left: 20px; ">CS5610_01 fall 2023
                                 Semest...</i><br>
 
                             <ul>
                                 <li><a class="accountNavigationSelected" href="home.html">
-                                        Home</li></a>
+                                        Home</a></li>
                                 <li><a class="accountNavigationUNSelected" href="#">
                                         Modules</a></li>
                                 <li><a class="accountNavigationUNSelected" href="#">
-                                        Piazza</li></a>
+                                        Piazza</a></li>
                                 <li><a class="accountNavigationUNSelected" href="#">
                                         Zoom Meetings</a></li>
                                 <li><a class="accountNavigationUNSelected" href="assignments/index.html">
@@ -133,19 +133,19 @@
                     </div>
 
 
-                    <div class="col custom-col4">
+                    <div class="col custom-col4 ">
                         <div class="row custom-row4">
 
-                            <div class="row">
-                                <div class="col text-end">
+                            <div class="row justify-content-end">
+                                <div class="col-auto ">
                                     <a href="index.html"><button type="button" class="btn btn-secondary btn-sm">Collapse
                                             All</button></a>
                                 </div>
-                                <div class="col-auto float-end">
+                                <div class="col-auto ">
                                     <a href="index.html"><button type="button" class="btn btn-secondary btn-sm">View
                                             Progress</button></a>
                                 </div>
-                                <div class="col-auto float-end">
+                                <div class="col-auto ">
                                     <div class="btn-group">
                                         <select class="form-select form-select-md btn btn-light " style="width: 150px">
                                             <option value="Module 0">Week 0</option>
@@ -156,100 +156,299 @@
                                     </div>
                                 </div>
 
-                                <div class="col-auto float-end">
+                                <div class="col-auto ">
                                     <a href="index.html"><button type="button" class="btn btn-danger btn-sm"><i
                                                 class="fas fa-plus "
                                                 style="color: white ; margin-right: 0px; font-size: 10px;"></i>Module</button></a>
                                 </div>
-                                <div class="col-auto float-end">
+                                <div class="col-auto ">
                                     <a href="index.html"><button type="button" class="btn btn-se btn-sm"><i
                                                 class="fa fa-ellipsis-v" aria-hidden="true"
                                                 style="color: white ; margin-left: 0px; font-size: 10px; "></i></button></a>
                                 </div>
                             </div>
 
-
-
-
                         </div>
 
-                        <div class="row custom-row5">
-
-                            <div class="row custom-row7">Week 0 - INTRO</div>
-                            <div class="row custom-row6">LEARNING OBJECTIVES</div>
-
-                            <div class="row custom-row6">Introduction to the course</div>
-                            <div class="row custom-row6">Learn what is Web Development</div>
-                            <div class="row custom-row6">Creating a development environment</div>
-                            <div class="row custom-row6">Creating a Web Application</div>
-                            <div class="row custom-row6">Getting started with the 1st assignment </div>
-
-
-
-
-                            <div class="row custom-row6">READING</div>
-
-                            <div class="row custom-row6">Full Stack Developer - Chapter 1 - Introduction</div>
-                            <div class="row custom-row6">Full Stack Developer - Chapter 2 - Creating User Interfaces
-                                With HTML</div>
-
-                            <div class="row custom-row6">SLIDES</div>
-
-
-                                <div class="row custom-row6"><a href="#">Introduction to Web Development Links to an external site.
-                                </div>
-                            </a>
+                        <div class="row custom-row5 ">
                             
-                                <div class="row custom-row6"><a href="#">Creating an HTTP server with Node.js Links to an external
-                                    site.</div>
-                            </a>
-                           
-                                <div class="row custom-row6"><a href="#">Creating a React Application Links to an external site.
-                                </div>
-                            </a>
+                            <div class="listModules">
+                                <br>
+                                <ul class="list-group " style="margin-bottom: 40px;">
+                                    <li class="list-group-item active" aria-current="true"
+                                        style="padding-left: 0; margin-left: 0;background-color: RGB(220,220,220);color:black;border:none;"><i class="fas fa-ellipsis-v"
+                                            style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i><b>Week 0 - INTRO</b><i
+                                            class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item " style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i><b>LEARNING OBJECTIVES</b><i
+                                            class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+
+                                    <li class="list-group-item " style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Introduction to the
+                                        course<i class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learn what is Web
+                                        Development<i class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creating a development
+                                        environment<i class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creating a Web
+                                        Application<i class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Getting started with
+                                        the 1st assignment<i class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
 
 
 
-                            <div class="row custom-row7">Week 1 - HTML</div>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i><b>READING</b><i
+                                            class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full Stack Developer -
+                                        Chapter 1 - Introduction<i class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full Stack Developer -
+                                        Chapter 2 - Creating User Interfaces With HTML<i
+                                            class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i><b>SLIDES</b><i
+                                            class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        
+                                            
+                                            <a href="https://www.youtube.com/watch?v=_Hq9n7cc8rk"><i class="fas fa-square"></i> Introduction to Web Development Links to an external site.
+                                                    <i class="fas fa-arrow-right"></i></a>
+                                            
+                                            
+                                            
+                                            <i
+                                                class="fas fa-ellipsis-v float-end"
+                                                style="margin-left: 25px; color: gray"></i><i
+                                                class="fas fa-check-circle float-end" style="color:green"></i></a>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        
+                                        
+                                        
+                                        
+                                     
+                                            
+                                            
+                                            <a href="https://www.youtube.com/watch?v=_Hq9n7cc8rk"><i class="fas fa-square"></i> Creating
+                                                an HTTP server with Node.js Links to an external site.
+                                                <i class="fas fa-arrow-right"></i></a>
+                                            
+                                            <i
+                                                class="fas fa-ellipsis-v float-end"
+                                                style="margin-left: 25px; color: gray"></i><i
+                                                class="fas fa-check-circle float-end" style="color:green"></i></a>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                      
+                                            
+                                            <a href="https://www.youtube.com/watch?v=_Hq9n7cc8rk"><i class="fas fa-square"></i> Creating a
+                                                React Application Links to an external site.
+                                                <i class="fas fa-arrow-right"></i></a>
+                                            
+                                            
+                                            <i
+                                                class="fas fa-ellipsis-v float-end"
+                                                style="margin-left: 25px; color: gray"></i><i
+                                                class="fas fa-check-circle float-end" style="color:green"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="listModules">
+                                <ul class="list-group">
+                                    <li class="list-group-item active " aria-current="true"
+                                        style="padding-left: 0; margin-left: 0; background-color: RGB(220,220,220);color:black;border:none;"><i class="fas fa-ellipsis-v"
+                                            style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i><b>Week 1 - HTML</b><i
+                                            class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i><b>LEARNING OBJECTIVES</b><i
+                                            class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learn how to create
+                                        user interfaces with HTML<i class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keep working on
+                                        assignment 1<i class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deploy the assignment
+                                        to Netlify<i class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i><b>READING</b><i
+                                            class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full Stack Developer -
+                                        Chapter 1 - Introduction<i class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full Stack Developer -
+                                        Chapter 2 - Creating User Interfaces With HTML<i
+                                            class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i><b>SLIDES</b><i
+                                            class="fas fa-ellipsis-v float-end"
+                                            style="margin-left: 25px; color: gray"></i><i
+                                            class="fas fa-check-circle float-end" style="color:green"></i>
+                                    </li>
 
-                            <div class="row custom-row6">LEARNING OBJECTIVES</div>
-
-                            <div class="row custom-row6">Learn how to create user interfaces with HTML</div>
-                            <div class="row custom-row6">Keep working on assignment 1</div>
-                            <div class="row custom-row6">Deploy the assignment to Netlify</div>
 
 
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        
+                                        
+                                      
+                                            
+                                            <a href="https://www.youtube.com/watch?v=_Hq9n7cc8rk"><i class="fas fa-square"></i> Full Stack
+                                                Developer - Chapter 1 - Introduction site.
+                                                    <i class="fas fa-arrow-right"></i></a>
+                                            
+                                            
+                                            
+                                            <i
+                                                class="fas fa-ellipsis-v float-end"
+                                                style="margin-left: 25px; color: gray"></i><i
+                                                class="fas fa-check-circle float-end" style="color:green"></i></a>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        
+                                        
+                                               
+                                            <a href="https://www.youtube.com/watch?v=_Hq9n7cc8rk"><i class="fas fa-square"></i> Full Stack
+                                            Developer - Chapter 2 - Creating User Interfaces With HTML site.
+                                                <i class="fas fa-arrow-right"></i></a>
+                                            
+                                            
+                                            <i
+                                                class="fas fa-ellipsis-v float-end"
+                                                style="margin-left: 25px; color: gray"></i><i
+                                                class="fas fa-check-circle float-end" style="color:green"></i></a>
+                                    </li>
+                                    <li class="list-group-item" style="padding-left: 0; margin-left: 0;"><i
+                                            class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        <i class="fas fa-ellipsis-v" style="font-size: 12px;"></i>
+                                        
+                                        
+                                        
+                                      
+                                            <a href="https://www.youtube.com/watch?v=_Hq9n7cc8rk"><i class="fas fa-square"></i> Create
+                                                HTML Website video.
+                                                    <i class="fas fa-arrow-right"></i></a>
+                                            
+                                            
+                                            
+                                            <i class="fas fa-ellipsis-v float-end"
+                                                style="margin-left: 25px; color: gray"></i><i
+                                                class="fas fa-check-circle float-end" style="color:green"></i></a>
+                                    </li>
+                                </ul>
 
-
-                            <div class="row custom-row6">READING</div>
-
-                            <div class="row custom-row6">Full Stack Developer - Chapter 1 - Introduction</div>
-                            <div class="row custom-row6">Full Stack Developer - Chapter 2 - Creating User Interfaces
-                                With HTML</div>
-                                <div class="row custom-row6">SLIDES</div>
-
-
-                                <div class="row custom-row6"><a href="#">Full Stack Developer - Chapter 1 - Introduction site.
-                                </div>
-                            </a>
-                            
-                                <div class="row custom-row6"><a href="#">Full Stack Developer - Chapter 2 - Creating User Interfaces
-                                    With HTML site.</div>
-                            </a>
-                           
-                                <div class="row custom-row6"><a href="#">Create HTML Website video.
-                                </div>
-                            </a>
-
+                            </div>
 
 
                         </div>
                     </div>
 
-                    <div class="col custom-col5">
+                    <div class="col custom-col5 d-none d-xl-block">
                         <label>Course Status</label><br>
-                        <button type="button" style="background-color: gray;padding-right: 0;padding-left: 0;"><i class="fas fa-eye-slash" ></i>Unpublish</button>
-                        <button type="button" style="background-color:  green; padding-right: 0;padding-left: 0;"><i class="fas fa-eye-slash" ></i>Published</button>
+                        <button type="button" style="background-color: gray;padding-right: 0;padding-left: 0;"><i
+                                class="fas fa-eye-slash"></i>Unpublish</button>
+                        <button type="button" style="background-color:  green; padding-right: 0;padding-left: 0;"><i
+                                class="fas fa-eye-slash"></i>Published</button>
                         <div class="leftbuttons">
                             <button type="button"><i class="fas fa-file-import"></i>Import Existing Content</button>
                             <button type="button"><i class="fas fa-cloud-download-alt"></i>Import From Commons</button>
@@ -262,7 +461,7 @@
                             <button type="button"><i class="fas fa-bell"></i>
                                 View Course Notifications</button>
                         </div>
-                        
+
                         <label>Comming Up</label>
                         <a href="#">View Calendar</a>
                         <ul>
