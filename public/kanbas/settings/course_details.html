@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>kanbas home</title>
     <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../index.css" rel="stylesheet" />
+    <link href="settings.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
@@ -13,401 +13,530 @@
 
 <body>
 
-    <table width="100%">
-        <tbody>
-            <tr>
-                <td valign="top">
-                    <div class="fixed-column-content">
-                    <div class="sidebar">
-                                   
-                                        <img src="../../images/neu.png" class="northeastern-image">
-                                        <ul class="nav nav-tabs">
-                                            <a class="nav-link " href="index.html">
-                                                <li class="nav-item"><i class="fas fa-user-circle"></i>
-                                                    Account</li>
-                                            </a>
-
-                                            <a class="nav-link" href="#">
-                                                <li class="nav-item"> <i class="fas fa-tachometer-alt"></i>
-                                                    Dashboard</li>
-                                            </a>
-                                            <a class="nav-link" href="../settings/course_details.html">
-                                                <li class="nav-item"><i class="fas fa-book"></i>
-                                                    Courses</li>
-                                            </a>
-                                            <a class="nav-link" href="#">
-                                                <li class="nav-item"><i class="far fa-calendar-alt"></i>
-                                                    Calendar</li>
-                                            </a>
-                                            <a class="nav-link" href="#">
-                                                <li class="nav-item"><i class="fas fa-inbox"></i>
-                                                    Inbox</li>
-                                            </a>
-                                            <a class="nav-link" href="#">
-                                                <li class="nav-item"><i class="far fa-clock"></i>
-                                                    History</li>
-                                            </a>
-                                            <a class="nav-link" href="#">
-                                                <li class="nav-item"><i class="fas fa-desktop"></i>
-                                                    Studio</li>
-                                            </a>
-                                            <a class="nav-link" href="#">
-                                                <li class="nav-item"><i class="fas fa-long-arrow-alt-right"></i>
-                                                    Commons</li>
-                                            </a>
-                                            <a class="nav-link" href="#">
-                                                <li class="nav-item"><i class="far fa-question-circle"></i>
-                                                    Help</li>
-                                            </a>
-                                        </ul>
-                                    </div>
-                    </div>
-                                
-                </td>
-
-                <td valign="top">
+    <div class="container-fluid">
+        <div class="row custom-row1">
+            <!-- First Column -->
+            <div class="col custom-col1 d-none d-xl-block ">
+                <div class="sidebar">
                     <ul>
-                        <a href="../home.html">
-                            <li>Home</li>
+                        <a class="sidebar-unselected" href="#">
+                            <li class="listItems"><img class="northeasternIMG" src="../../images/neu.png"></li>
                         </a>
-                        <a href="#">
-                            <li>Modules</li>
-                        </a>
-                        <a href="#">
-                            <li>Piazza</li>
-                        </a>
-                        <a href="#">
-                            <li>Zoom Meetings</li>
-                        </a>
-                        <a href="assignments/index.html">
-                            <li>Assignments</li>
-                        </a>
-                        <a href="#">
-                            <li>Quizzes</li>
-                        </a>
-                        <a href="../grades.html">
-                            <li>Grades</li>
-                        </a>
-                        <a href="#">
-                            <li>People</li>
-                        </a>
-                        <a href="#">
-                            <li>Panopto Video</li>
-                        </a>
-                        <a href="#">
-                            <li>Discussions</li>
-                        </a>
-                        <a href="#">
-                            <li>Announcements</li>
-                        </a>
-                        <a href="#">
-                            <li>Pages</li>
-                        </a>
-                        <a href="#">
-                            <li>Files</li>
-                        </a>
-                        <a href="#">
-                            <li>Rubrics</li>
-                        </a>
-                        <a href="#">
-                            <li>Outcomes</li>
-                        </a>
-                        <a href="#">
-                            <li>Collaborations</li>
-                        </a>
-                        <a href="#">
-                            <li>Syllabus</li>
-                        </a>
-                        <a href="#">
-                            <li>Settings</li>
+                        <a class="sidebar-unselected" href="../profile/index.html">
+                            <li><i class="fas fa-user-circle"></i>
+                                Account</li>
                         </a>
 
+                        <a class="sidebar-unselected" href="../Dashboard/dashboard.html">
+                            <li> <i class="fas fa-tachometer-alt"></i>
+                                Dashboard</li>
+                        </a>
+                        <a class="sidebar-selected" href="../home.html">
+                            <li><i class="fas fa-book"></i>
+                                Courses</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="far fa-calendar-alt"></i>
+                                Calendar</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="fas fa-inbox"></i>
+                                Inbox</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="far fa-clock"></i>
+                                History</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="fas fa-desktop"></i>
+                                Studio</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="fas fa-long-arrow-alt-right"></i>
+                                Commons</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="far fa-question-circle"></i>
+                                Help</li>
+                        </a>
                     </ul>
-                </td>
-                <td valign="top">
-
-                    <a href="course_details.html"> <button type="button">Course Details</button></a>
-                    <a href="#"> <button type="button">Sections</button></a>
-                    <a href="course_navigation.html"> <button type="button">Navigation</button></a>
-                    <a href="#"> <button type="button">Apps</button></a>
-                    <a href="#"> <button type="button">Feature Options</button></a>
-                    <a href="#"> <button type="button">Integrations</button></a>
-
-                    <h3>Course Details</h3>
-                    <table border="0" width="100%">
-                        <tr>
-                            <td valign="top">
-                                <label>Image: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="file"><br><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-                                <label>Name: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="text"><br><br>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-                                <label>Course Code: </label>
-
-                            </td>
-                            <td>
-                                <input type="text"><br><br>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td valign="top">
-
-                                <label>Blueprint Course: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="text"><br><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-
-                                <label>Course Template: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="checkbox" value="course_template" id="course_template" />
-                                <label for="chkbox-course_template">Enable course as a Course Template</label> <br><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-                                <label>Time Zone: </label>
-                            </td>
-                            <td valign="top"> <select id="select-one-genre">
-                                    <option selected value="Eastern Time(US & Canada)(-05:00/-04:00)">
-                                        Eastern Time(US & Canada)(-05:00/-04:00)</option>
-                                </select></br></br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-
-                                <label>SIS ID: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="text"><br><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-
-                                <label>Subaccount: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="text"><br><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-
-                                <label>Term: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="text"><br><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
+                </div>
+            </div>
 
 
-                                <label>Participation: </label>
-                            </td>
-                            <td>
-                                <select id="select-one-genre">
-                                    <option selected value="Term">
-                                        Term</option>
-                                </select>
-                                <p>Course participation is limited to <b>term</b> start and end dates</p>
-                                <label><b>Start</b></label><br />
-                                <input type="date" id="text-fields-dob" value="2021-01-01" /><br /><br />
+            <!-- second Column -->
+            <div class="col custom-col2 ">
+                <!-- First row inside the second column -->
+                <div class="row custom-row2">
 
-                                <label><b>End</b></label><br />
-                                <input type="date" id="text-fields-dob" value="2021-01-01" /><br /><br />
-                                <input type="checkbox" value="participation" id="participation" />
-                                <label for="chkbox-participation">Restrict students from viewing course before term
-                                    start date</label> <br>
-                                <input type="checkbox" value="participation" id="participation" />
-                                <label for="chkbox-participation">Restrict students from viewing course before term end
-                                    date</label> <br><br>
-                        <tr>
-                            <td valign="top">
-                                <label>Default due time:</label>
-                            </td>
-                            <td valign="top">
-                                <select id="select-one-genre">
-                                    <option selected value="DefauktDueTime">
-                                        Account default (11:59pm)</option>
-                                </select>
+                    <button type="button">
+                        <nav style="--bs-breadcrumb-divider: '>'; " aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">
+                                        <i class="fas fa-bars"></i> CS5610.2023fall.Sec01
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                            </ol>
+                        </nav>
+                    </button>
+
+                    <br />
+                </div>
+                <div class="row custom-row3">
+                    <div class="col custom-col2 d-none d-xl-block">
+                        <div class="accountNavigation">
+                            <i style="font-size:small;  margin-bottom: 20px; margin-left: 20px; ">CS5610_01 fall
+                                2023
+                                Semest...</i><br>
+
+                            <ul>
+                                <li><a class="accountNavigationUNSelected" href="../home.html">
+                                        Home</li></a>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Modules</a></li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Piazza</li></a>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Zoom Meetings</a></li>
+                                <li><a class="accountNavigationUNSelected" href="../assignments/index.html">
+                                        Assignments</a></li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Quizzes</a></li>
+                                <li><a class="accountNavigationUNSelected" href="../grades.html">
+                                        Grades</a></li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        People</a></li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Panopto Video</a></li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Discussions</a><i class="fas fa-eye-slash" style="margin-left: 40px;"></i>
+                                </li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Announcements</a><i class="fas fa-eye-slash" style="margin-left: 2px;"></i>
+                                </li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Pages</a><i class="fas fa-eye-slash" style="margin-left: 86px;"></i></li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Files</a><i class="fas fa-eye-slash" style="margin-left: 98px;"></i></li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Rubrics</a><i class="fas fa-eye-slash" style="margin-left: 74px;"></i></li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Outcomes</a><i class="fas fa-eye-slash" style="margin-left: 51px;"></i></li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Collaborations</a><i class="fas fa-eye-slash" style="margin-left: 18px;"></i>
+                                </li>
+                                <li><a class="accountNavigationUNSelected" href="#">
+                                        Syllabus</a><i class="fas fa-eye-slash" style="margin-left: 68px;"></i></li>
+                                <li><a class="accountNavigationSelected" href="course_details.html">
+                                        Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col custom-col3">
+                        <div class="row custom-row4 justify-content-center">
+                            <div class="col-auto">
+                                <a href="course_details.html"><button type="button" class="btn btn-se btn-sm"
+                                        style="font-size: 20px;">Course Details</button></a>
+                            </div>
+
+                            <div class="col-auto">
+                                <a href="#"><button type="button" class="btn btn-se btn-sm"
+                                        style="color:red;font-size: 20px;">Sections</button></a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="course_navigation.html"><button type="button" class="btn btn-se btn-sm"
+                                        style="font-size: 20px;color:red;">Navigation</button></a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#"><button type="button" class="btn btn-se btn-sm"
+                                        style="color:red;font-size: 20px;">Apps</button></a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#"><button type="button" class="btn btn-se btn-sm"
+                                        style="color:red;font-size: 20px;">Features Options</button></a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#"><button type="button" class="btn btn-se btn-sm"
+                                        style="color:red;font-size: 20px;">Integrations</button></a>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="row custom-row5">
+
+                            <h3>Course Details</h3>
+                            <div class="row ">
+                                <div class="col-auto form-group offset-sm-1">
+                                    <label for="imageUpload"><b>Image:</b></label>
+                                    <input type="file" class="form-control-file" id="imageUpload">
+                                </div>
+                            </div>
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="points" class="col-form-label"><b>Names:</b> </label>
+                                </div>
+                                <div class="col-auto ">
+                                    <input type="text" id="points" class="form-control " style="width: 500px;">
+                                </div>
+                            </div>
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="points" class="col-form-label"><b>Course Code:</b> </label>
+                                </div>
+                                <div class="col-auto ">
+                                    <input type="text" id="points" class="form-control " style="width: 500px;">
+                                </div>
+
+                            </div>
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="points" class="col-form-label"><b>Bluprint Course:</b> </label>
+                                </div>
+                                <div class="col-auto ">
+                                    <input type="text" id="points" class="form-control " style="width: 500px;">
+                                </div>
+
+                            </div>
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label><b>Course Template:</b> </label>
+
+                                    <input class="form-check-input" type="checkbox" id="r6" />
+                                    <label class="form-check-label" style="color:gray;" for="r6">
+                                        Enable Course as a Course Template</label> <br>
+                                </div>
+                            </div>
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="assignment" class="col-form-label"><b>Time Zone:</b> </label>
+                                </div>
+                                <div class="col-auto">
+                                    <select class="form-select" id="assignment" style="width: 500px;">
+                                        <option selected>Eastern Time(US &Canada) (-5:00/-04:00)</option>
+
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="points" class="col-form-label"><b>SIS ID: </b></label>
+                                </div>
+                                <div class="col-auto ">
+                                    <input type="text" id="points" class="form-control " style="width: 500px;">
+                                </div>
+
+                            </div>
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="points" class="col-form-label"><b>Subaccount: </b> </label>
+                                </div>
+                                <div class="col-auto ">
+                                    <input type="text" id="points" class="form-control " style="width: 500px;">
+                                </div>
+
+                            </div>
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="points" class="col-form-label"><b>Term:</b> </label>
+                                </div>
+                                <div class="col-auto ">
+                                    <input type="text" id="points" class="form-control " style="width: 500px;">
+                                </div>
+
+                            </div>
+
+
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="assignment" class="col-form-label"><b>Participation:</b> </label>
+                                </div>
+                                <div class="col-auto">
+                                    <select class="form-select" id="assignment" style="width: 500px;">
+                                        <option selected>Term</option>
+
+                                    </select>
+                                    <p>Course participation is limited to <b>term</b> start and end dates</p>
+
+
+                                    <div class="col-md-6">
+                                        <h6>Start</h6>
+                                        <div class="input-group">
+                                            <input type="date" class="form-control" id="available-from" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>End</h6>
+                                        <div class="input-group">
+                                            <input type="date" class="form-control" id="until-date" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row ">
+
+                                        <div class="col-auto ">
+                                            <input class="form-check-input" type="checkbox" id="r6" />
+                                            <label class="form-check-label" for="r6">
+                                                Restrict students from viewing course before term start date</label>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+
+                                        <div class="col-auto ">
+                                            <input class="form-check-input" type="checkbox" id="r6" />
+                                            <label class="form-check-label" for="r6">
+                                                Restrict students from viewing course after term end date</label>
+                                            <br>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="assignment" class="col-form-label"><b>Default due time:</b> </label>
+                                </div>
+
+                                <div class="col-auto">
+                                    <select class="form-select" id="assignment" style="width: 500px;">
+                                        <option selected>Account default (11:59pm)</option>
+
+                                    </select>
+                                    
+                                </div>
                                 <p>This influences the user interface for setting
                                     due dates. It does not change the time Due
-                                    for any existing assignments.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
+                                    for any existing assignments.</p>
 
-                                <lable>Language:</lable>
-                            </td>
-                            <td valign="top">
+                            </div>
 
-                                <select id="select-one-genre">
-                                    <option selected value="Language">
-                                        Not set(user-configurable,defaults to English (United States))</option>
-                                </select>
+
+                           
+
+                            <div class="row ">
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="assignment" class="col-form-label"><b>Language:</b> </label>
+                                </div>
+                                <div class="col-auto">
+                                    <select class="form-select" id="assignment">
+                                        <option selected>Not set(user-configurable,defaults to English (United
+                                            States))</option>
+
+                                    </select>
+                                    
+                                </div>
                                 <p>This will override any user/system language preferences.
-                                    This is only recommended for foreign language courses
-                                </p>
-                            </td>
-                        </tr>
+                                    This is only recommended for foreign language courses</p>
+                            </div>
+                            <div class="row ">
 
-                        <tr>
-                            <td valign="top">
+                                <div class="col-auto offset-sm-1">
 
-                                <label>File Storage: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="text"><br><br>
-                            </td>
-                        </tr>
+                                    <label for="points" class="col-form-label"><b>File Storage: </b></label>
+                                </div>
+                                <div class="col-auto ">
+                                    <input type="text" id="points" class="form-control " style="width: 500px;">
+                                </div>
+                            </div>
 
-                        <tr>
-                            <td valign="top">
+                            <div class="row ">
 
-                                <label>Large Course: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="checkbox" value="course_template" id="course_template" />
-                                <label for="chkbox-course_template">Launch SpeedGrader Filtered by Student Group</label>
-                                <br>
-                            </td>
-                        </tr>
+                                <div class="col-auto offset-sm-1">
 
-                        <tr>
-                            <td valign="top">
+                                    <label>Large Course: </label>
 
-                                <label>Grading Scheme: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="checkbox" value="course_template" id="course_template" />
-                                <label for="chkbox-course_template">Enable course grading scheme</label> <br><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
+                                    <input class="form-check-input" type="checkbox" id="r6" />
+                                    <label class="form-check-label" for="r6">
+                                        Launch SpeedGrader Filtered by Student Group</label> <br>
+                                </div>
+                            </div>
+                            <div class="row ">
 
-                                <label>License: </label>
-                            </td>
-                            <td valign="top">
-                                <select id="select-one-genre">
-                                    <option selected value="Private (Copyrighted)">
-                                        Private (Copyrighted)</option>
-                                </select>
+                                <div class="col-auto offset-sm-1">
 
-                                <img src="questionmark1.png" alt="YouTube" width="15px" height="15px"> <br><br>
-                            </td>
-                        </tr>
+                                    <label>Grading Scheme: </label>
 
-                        <tr>
-                            <td valign="top">
-
-                                <label>File Copyright: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="checkbox" value="course_template" id="course_template" />
-                                <label for="chkbox-course_template">Copyright and license information must be provided
-                                    for Files
-                                    before they are published.
-                                </label> <br><br>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td valign="top">
-
-                                <label>Visibility: </label>
-                            </td>
-                            <td valign="top">
-                                <label>If you need to make your course public please contact your
-                                    administrator/support.</label><br>
-                                <select id="select-one-genre">
-                                    <option selected value="Course">
-                                        Course</option>
-                                </select>
-
-                                <img src="questionmark1.png" alt="YouTube" width="15px" height="15px"><br><br>
-                                <input type="checkbox" value="visibility" id="visibility" />
-                                <label for="chkbox-visibility">Include this course in the public course index
-                                </label> <br><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-
-                                <label>License: </label>
-                            </td>
-                            <td valign="top">
-                                <select id="select-one-genre">
-                                    <option selected value="On-Campus">
-                                        On-Campus</option>
-                                </select>
-
-                                <br><br>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td valign="top">
-
-                                <label>Mastery Paths: </label>
-                            </td>
-                            <td valign="top">
-                                <input type="checkbox" value="Mastery_Paths" id="Mastery_Paths" />
-                                <label for="chkbox-Mastery_Paths">Enable individual learning paths for students based on
-                                    assessment</label> <br><br>
-                            </td>
-                        </tr>
+                                    <input class="form-check-input" type="checkbox" id="r6" />
+                                    <label class="form-check-label" for="r6">
+                                        Enable Course grading scheme</label> <br>
+                                </div>
+                            </div>
 
 
 
 
-                        <tr>
-                            <td valign="top">
+                            <div class="row ">
 
-                                <label>Description: </label>
-                            </td>
-                            <td valign="top">
-                                <form id="textarea">
-                                    <textarea cols="60" rows="3"></textarea>
-                                </form>
-                                <a href="#" style="text-decoration: none;">more options</a>
-                                <br><br>
-                                <a href="course_details.html"> <button type="button" style="float: right;">Update Course
-                                        Details</button></a>
+                                <div class="col-auto offset-sm-1">
 
-                            </td>
-                        </tr>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+                                    <label for="assignment" class="col-form-label"><b>License:</b> </label>
+
+                                    <div class="col-auto d-flex align-items-center">
+
+                                        <select class="form-select" id="assignment" style="width: 500px;">
+                                            <option selected>Private (Copyrighted)</option>
+
+                                        </select>
+                                        <i class="fas fa-question-circle" style="color: red; "></i>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label><b>File Copyright:</b> </label>
+
+                                    <input class="form-check-input" type="checkbox" id="r6" />
+                                    <label class="form-check-label" for="r6">
+                                        Copyright and license information must
+                                        be provided
+                                        for Files
+                                        before they are published.</label> <br>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="assignment" class="col-form-label"><b>Visibility:</b> </label>
+                                </div>
+                                <div class="col-auto">
+                                    <p>If you need to make your course public please contact your administrator/support.
+                                    </p><br>
+                                    <div class="col-auto d-flex align-items-center">
+
+                                        <select class="form-select" id="assignment"
+                                            style="width: 500px; background-color: gray;">
+                                            <option selected>Course</option>
+
+                                        </select>
+                                        <i class="fas fa-question-circle" style="color: red; "></i>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <input class="form-check-input" type="checkbox" id="r6" />
+                                        <label class="form-check-label" for="r6">
+                                            Include this course in the public course index</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label for="assignment" class="col-form-label"><b>Format:</b> </label>
+
+                                    <div class="col-auto">
+                                        <select class="form-select" id="assignment" style="width: 500px;">
+                                            <option selected>On-Campus</option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label><b>Mastery Paths:</b> </label>
+
+                                    <input class="form-check-input" type="checkbox" id="r6" />
+                                    <label class="form-check-label" for="r6">
+                                        Enable individual learning paths for students based on assessment</label> <br>
+                                </div>
+                            </div>
+
+
+                            <div class="row ">
+
+                                <div class="col-auto offset-sm-1">
+
+                                    <label><b>Description:</b> </label>
+                                    <textarea class="form-control">
+                                            </textarea>
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                    <div class="col custom-col5 d-none d-xl-block">
+
+                    </div>
+
+                </div>
+            </div>
+
+
 </body>
 
 </html>
