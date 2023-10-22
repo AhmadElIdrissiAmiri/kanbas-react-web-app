@@ -1,0 +1,32 @@
+.card-img-top{
+    height: 200px; 
+    object-fit: cover;
+
+
+}
+
+.card-title a { 
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+
+.card-title { 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    color: red;
+
+}
+
+.card-text1{
+
+    font-size: 18px;
+}
+.card-text2{
+
+    font-size: 14px;
+    color:gray;
+}
+

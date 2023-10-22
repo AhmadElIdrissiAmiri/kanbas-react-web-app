@@ -1,0 +1,41 @@
+/* navigation.css */
+.list-group2 {
+    background-color: #000000;
+    max-width: 100px;
+    padding: 0px;
+    padding-right: 0px;
+    height: 100vh;
+    
+    border: none;
+    text-decoration: none;
+  
+}
+.list-group2 a{
+    text-decoration: none;
+    color: white;
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+  
+}
+
+.list-group2 a.active {
+    background-color: white; 
+    color: red; 
+    
+
+}
+.neuImage{
+
+    max-width: 100px;
+    padding-right: 0px;
+    text-align: center;
+    display: block;
+
+}
+.iconstyling{
+    font-size: 25px;
+    display: block;
+    
+
+}

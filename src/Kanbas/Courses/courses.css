@@ -1,0 +1,54 @@
+
+.listModules{
+    border-left: 10px solid green;
+  padding-right: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+
+
+.customDiv{
+  overflow-x: auto;
+  height: 750px;
+  margin-left: 50px;
+}
+
+.iconStyle1{
+font-size:20px;
+color:lightgreen;
+}
+
+.iconStyle2{
+  font-size:20px;
+  color:white;
+}
+
+.iconStyle3{
+  font-size:20px;
+  color: black;
+}
+
+
+.buttonStyle button{
+
+  margin-bottom: 5px;
+}
+
+
+.list-item {
+  list-style: none;
+  border-left: 5px solid green;
+ 
+  padding: 10px;
+}
+
+.list-header {
+  text-decoration: none;
+  
+  padding: 5px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
