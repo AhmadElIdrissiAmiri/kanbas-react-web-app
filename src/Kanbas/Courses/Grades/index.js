@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import db from "../../Database";
 import { useParams } from "react-router-dom";
+import {LiaFileExportSolid} from "react-icons/lia";
+import {LiaFileImportSolid} from "react-icons/lia";
+import {FiSettings} from "react-icons/fi";
+import {BsFunnel} from "react-icons/bs";
 
 function Grades() {
   const { courseId } = useParams();
   const assignments = db.assignments.filter((assignment) => assignment.course === courseId);
   const enrollments = db.enrollments.filter((enrollment) => enrollment.course === courseId);
- 
+  const grades = db.grades.filter((grade) => {
+    const assignment = db.assignments.find((assignment) => assignment._id === grade.assignment);
+    return assignment.course === courseId;
+  });
   
+console.log(grades);
   const [filteredStudent, setFilteredStudent] = useState("all");
   const [filteredAssignment, setFilteredAssignment] = useState("all");
 
@@ -21,17 +29,42 @@ function Grades() {
 
   return (
     <div>
-      <h1>Grades</h1>
+      <div style={{ display: "flex", justifyContent: "flex-end" }}>
+        <button
+          type="button"
+          className="btn btn-light btn-sm buttonStyle"
+          style={{ width: "160px", marginRight: "20px" }}
+        >
+          <LiaFileExportSolid />
+          Import
+        </button>
+        <button
+          type="button"
+          className="btn btn-light btn-sm buttonStyle"
+          style={{ width: "160px", marginRight: "20px" }}
+        >
+          <LiaFileImportSolid />
+          Export
+        </button>
+        <button
+          type="button"
+          className="btn btn-light btn-sm buttonStyle"
+          style={{ width: "10px" }}
+        >
+          <FiSettings />
+        </button>
+      </div>
+
       <div className="row">
         <div className="col-md-6">
-          <h6>Student Names</h6>
+          <h6 >Student Names</h6>
           <select
             className="form-select"
             value={filteredStudent}
             onChange={handleStudentFilterChange}
             style={{ color: "gray" }}
           >
-            <option value="all">Show All Students</option>
+            <option value="all">Search Students</option>
             {enrollments.map((enrollment) => {
               const user = db.users.find((user) => user._id === enrollment.user);
               return (
@@ -50,7 +83,7 @@ function Grades() {
             onChange={handleAssignmentFilterChange}
             style={{ color: "gray" }}
           >
-            <option value="all">Show All Assignments</option>
+            <option value="all">Search Assignments</option>
             {assignments.map((assignment) => (
               <option key={assignment._id} value={assignment._id}>
                 {assignment.title}
@@ -60,10 +93,16 @@ function Grades() {
         </div>
       </div>
       <hr />
-
+      <button
+          type="button"
+          className="btn btn-light btn-sm buttonStyle"
+          style={{ width: "160px" }}
+        ><BsFunnel />Apply Filter
+          
+        </button>
       <div className="table-responsive">
-        <table className="table table-striped text-center">
-          <thead>
+        <table className="table table-striped text-center" style={{border:"2px"}}>
+          <thead >
             <tr>
               <th>Student Name</th>
               {assignments.map((assignment) => (
@@ -75,39 +114,35 @@ function Grades() {
             {enrollments.map((enrollment) => {
               const user = db.users.find((user) => user._id === enrollment.user);
 
-              if (filteredStudent === "all" || filteredStudent === user._id) {
-                return (
-                  <tr key={enrollment.user}>
-                    <td>
-                      {user.firstName} {user.lastName}
-                    </td>
-                    {assignments.map((assignment) => {
-                      const grade = db.grades.find(
-                        (grade) =>
-                          grade.student === enrollment.user && grade.assignment === assignment._id
-                      );
-                      return (
-                        <td key={assignment._id}>
-                          {filteredAssignment === "all" ? (
-                            <input
-                              type="number"
-                              className="form-control"
-                              placeholder="Enter the grade"
-                              min="0"
-                              max="100"
-                              value={grade?.grade || ""}
-                            />
-                          ) : (
-                            grade?.grade || ""
-                          )}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                );
-              } else {
-                return null;
-              }
+              return (
+                <tr key={enrollment.user}>
+                  <td style={{ color: "red" }}>
+                    {user.firstName} {user.lastName}
+                  </td>
+                  {assignments.map((assignment) => {
+                    const grade = grades.find(
+                      (grade) =>
+                        grade.student === user._id && grade.assignment === assignment._id
+                    );
+                    return (
+                      <td key={assignment._id}>
+                        {filteredAssignment === "all" ? (
+                          <input
+                            type="number"
+                            className="form-control"
+                            placeholder="Enter the grade"
+                            min="0"
+                            max="100"
+                            value={grade ? grade.grade : ""}
+                          />
+                        ) : (
+                          grade ? grade.grade : ""
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
             })}
           </tbody>
         </table>
