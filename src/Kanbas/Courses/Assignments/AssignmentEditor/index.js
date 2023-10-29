@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{ useState }from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import db from "../../../Database";
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
@@ -9,14 +9,17 @@ function AssignmentEditor() {
   const assignment = db.assignments.find(
     (assignment) => assignment._id === assignmentId
   );
+  const [title, setTitle] = useState(assignment.title);
+
 
   const { courseId } = useParams();
   const navigate = useNavigate();
 
   const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+
+  
 
   return (
     <div>
@@ -36,7 +39,11 @@ function AssignmentEditor() {
           <br/>
           <hr/>
       <h6>Assignment Name</h6>
-      <input value={assignment.title} className="form-control mb-2" />
+      <input
+  value={title}
+  onChange={(e) => setTitle(e.target.value)} 
+  className="form-control mb-2"
+/>
 
       <div className="row">
         <div className="col-auto offset-sm-1">

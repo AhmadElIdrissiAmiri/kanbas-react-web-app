@@ -1,17 +1,26 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { AiOutlineDown, AiOutlineRight } from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineDown, AiOutlineRight } from "react-icons/ai";
 import db from "../../Database";
 import "../courses.css";
 import { BsFillCheckCircleFill, BsGripVertical } from "react-icons/bs";
 import { GiNotebook } from "react-icons/gi";
-import { AiOutlinePlus } from "react-icons/ai";
 import { IoIosAdd, IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import { FaEllipsisV } from 'react-icons/fa';
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+} from "./assignmentsReducer";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  const dispatch = useDispatch();
 
   const [listVisibility, setListVisibility] = useState(true);
 
@@ -19,23 +28,59 @@ function Assignments() {
     setListVisibility(!listVisibility);
   };
 
+  const handleDeleteAssignment = (assignmentId) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this assignment?");
+    if (confirmDelete) {
+      dispatch(deleteAssignment(assignmentId));
+    }
+  };
+
   return (
     <div className="list-container">
-      <div style={{ float:"right", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ float: "right", alignItems: "center", justifyContent: "center" }}>
+        <button type="button" className="btn btn-light btn-sm buttonStyle" style={{ width: "160px" }}>
+          <IoIosAdd style={{ color: "black" }} /> Group
+        </button>
+        <button type="button" className="btn btn-danger btn-sm buttonStyle" style={{ width: "160px" }}>
+          <IoIosAdd className="iconStyle2" /> Module
+        </button>
+        <button type="button" className="btn btn-light btn-sm buttonStyle" style={{ width: "10px" }}>
+          <FaEllipsisV className="iconStyle3" />
+        </button>
+      </div>
+      <br />
+      <br />
+      <hr />
 
-<button type="button" className="btn btn-light btn-sm buttonStyle" style={{ width: "160px" }}>
-<IoIosAdd style={{color:"black"}}/>Group
-</button>
-<button type="button" className="btn btn-danger btn-sm buttonStyle" style={{ width: "160px" }}>
-  <IoIosAdd className="iconStyle2" /> Module
-</button>
-<button type="button" className="btn btn-light btn-sm buttonStyle" style={{ width: "10px" }}>
-  <FaEllipsisV className="iconStyle3" />
-</button>
-</div>
-<br/>
+      <div className="form-group">
+        <input
+          value={assignment.title}
+          className="form-control"
+          onChange={(e) => dispatch(setAssignment({ ...assignment, title: e.target.value }))
+          } />
 
-<hr/>
+        <textarea
+          value={assignment.description}
+          className="form-control"
+          onChange={(e) => dispatch(setAssignment({ ...assignment, description: e.target.value }))
+          } />
+        <input
+          value={assignment.point}
+          className="form-control"
+          onChange={(e) => dispatch(setAssignment({ ...assignment, point: e.target.value }))
+          } />
+
+        <br />
+        <button className="btn btn-success" onClick={() => dispatch(addAssignment({ ...assignment, course: courseId }))}>
+          Add
+        </button>
+        <button className="btn btn-primary" onClick={() => dispatch(updateAssignment(assignment))}>
+          Update
+        </button>
+        <br />
+      </div>
+
+      <hr />
       <div onClick={toggleList} className="list-header" style={{ height: "70px" }}>
         <BsGripVertical />
         {listVisibility ? (
@@ -54,7 +99,7 @@ function Assignments() {
         />
         <button
           type="button"
-          class="btn btn-light float-end"
+          className="btn btn-light float-end"
           style={{ marginLeft: "10px", borderRadius: "20px" }}
         >
           40% Total
@@ -67,16 +112,18 @@ function Assignments() {
             .map((assignment, index) => (
               <li key={index} className="list-item">
                 <BsGripVertical />
-                <Link style={{textDecoration:"none", color:"black"}}
+                <Link style={{ textDecoration: "none", color: "black" }}
                   to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
                 >
                   <GiNotebook style={{ color: "green", fontSize: "20px" }} />
                   <b>{assignment.title}</b>
                 </Link>
-                <AiOutlinePlus
-                  className="float-end"
-                  style={{ marginLeft: "10px", color: "gray" }}
-                />
+                <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
+                  <AiOutlinePlus
+                    className="float-end"
+                    style={{ marginLeft: "10px", color: "gray" }}
+                  />
+                </Link>
                 <BsFillCheckCircleFill
                   className="float-end"
                   style={{ marginLeft: "10px", color: "green" }}
@@ -85,6 +132,14 @@ function Assignments() {
                   <span style={{ color: "red" }}>Multiple Modules</span> |{" "}
                   {assignment.description} | {assignment.point}
                 </p>
+                <button className="btn btn-danger" style={{ float: "right" }}
+                  onClick={() => handleDeleteAssignment(assignment._id)}>
+                  Delete
+                </button>
+                <button class="btn btn-warning" style={{ float: "right" }}
+                  onClick={() => dispatch(setAssignment(assignment))}>
+                  Edit
+                </button>
               </li>
             ))}
         </ul>

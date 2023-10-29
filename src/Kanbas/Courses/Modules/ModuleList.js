@@ -2,15 +2,25 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { BsFillCheckCircleFill, BsGripVertical } from "react-icons/bs";
 import { HiOutlineDotsVertical } from "react-icons/hi";
-import { AiOutlinePlus, AiOutlineDown, AiOutlineRight } from "react-icons/ai"; // Import AiOutlineDown and AiOutlineRight
+import { AiOutlinePlus, AiOutlineDown, AiOutlineRight } from "react-icons/ai"; 
 import db from "../../Database";
 import "../courses.css";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules;
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
 
-  const [listVisibility, setListVisibility] = useState(Array(modules.length).fill(false));
+
+  const [listVisibility, setListVisibility] = useState(Array(modules.length).fill(true));
 
   const toggleList = (index) => {
     const updatedVisibility = [...listVisibility];
@@ -20,18 +30,50 @@ function ModuleList() {
 
   return (
     <div className="list-container">
+
+<div className="form-group">
+  <input
+    value={module.name}
+    className="form-control"
+    onChange={(e) =>   dispatch(setModule({ ...module, name: e.target.value }))
+  }/>
+
+
+  <textarea
+    value={module.description}
+    className="form-control"
+    onChange={(e) => 
+
+      dispatch(setModule({ ...module, description: e.target.value }))
+    }/>
+
+  <br/>
+  <button className="btn btn-success"  onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+
+    Add
+  </button>
+  <button className="btn btn-primary"  onClick={() => dispatch(updateModule(module))}>
+
+    Update
+  </button>
+  <br/>
+  <br/>
+</div>
+
+
       {modules
         .filter((module) => module.course === courseId)
         .map((module, index) => (
           <div key={index}>
             <div onClick={() => toggleList(index)} className="list-header" style={{ marginBottom: "50px", height: "70px" }}>
-            <BsGripVertical style={{ fontSize: "18px" }} />
+              <BsGripVertical style={{ fontSize: "18px" }} />
               {listVisibility[index] ? (
-                <AiOutlineDown style={{ fontSize: "18px", marginRight: "10px" }} /> 
+                <AiOutlineDown style={{ fontSize: "18px", marginRight: "10px" }} />
               ) : (
-                <AiOutlineRight style={{ fontSize: "18px", marginRight: "10px" }} /> 
+                <AiOutlineRight style={{ fontSize: "18px", marginRight: "10px" }} />
               )}
-              
+
+
               <b>{module.name}</b>
               <HiOutlineDotsVertical
                 className="float-end"
@@ -50,6 +92,17 @@ function ModuleList() {
               <ul className="list-group" style={{ marginBottom: "10px" }}>
                 <li className="list-item" style={{ marginBottom: "10px" }}>
                   <p>{module.description}</p>
+                  <button className="btn btn-danger" style={{ float: "right" }}
+                    onClick={() => dispatch(deleteModule(module._id))}>
+
+                    Delete
+                  </button>
+                  <button class="btn btn-warning" style={{ float: "right" }}
+                        onClick={() => dispatch(setModule(module))}>
+
+                    Edit
+                  </button>
+
                 </li>
               </ul>
             )}

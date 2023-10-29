@@ -13,9 +13,9 @@ import Grades from "./Grades"
 
 import "./courses.css";
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   const [isCourseNavigationVisible, setIsCourseNavigationVisible] = useState(true);
   const toggleCourseNavigation = () => {
     setIsCourseNavigationVisible(!isCourseNavigationVisible);
