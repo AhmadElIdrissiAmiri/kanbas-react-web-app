@@ -1,0 +1,24 @@
+[
+  { "_id": "A101", "title": "A1 SETUP", "description": "Week 0 - SETUP", "point":"100 pts","course": "course1" },
+  { "_id": "A102", "title": "A2 HTML", "description": "Week 1 - HTML","point":"100 pts", "course": "course1" },
+  { "_id": "A103", "title": "A3 CSS", "description": "Week 2 - CSS", "point":"100 pts","course": "course1" },
+  { "_id": "A201", "title": "A4 BOOTSTRAP", "description": "Week 3 - Bootstrap","point":"100 pts", "course": "course1" },
+  { "_id": "A202", "title": "A5 JAVASCRIPT", "description": "Week 4 - JavaScript","point":"100 pts", "course": "course1" },
+  { "_id": "A203", "title": "A6 REACT", "description": "Week 6 - React & Routing", "point":"100 pts","course": "course1" },
+  { "_id": "A301", "title": "A7 MANGODB", "description": "Week 7 - Propeller Design", "point":"100 pts", "course": "course1" },
+
+
+  { "_id": "A101", "title": "A1 SETUP", "description": "Week 0 - SETUP","point":"100 pts", "course": "course2" },
+  { "_id": "A102", "title": "A2 UML DIAGRAM", "description": "Week 1 - UML DIAGRAM", "point":"100 pts","course": "course2" },
+  { "_id": "A103", "title": "A3 CREATE TABLES", "description": "Week 2 - CREATE TABLES","point":"100 pts","course": "course2" },
+  { "_id": "A201", "title": "A4 SELECT ", "description": "Week 3 - SELECT", "point":"100 pts","course": "course2" },
+  { "_id": "A202", "title": "A5 QUERIES", "description": "Week 4 - QUERIES", "point":"100 pts","course": "course2" },
+  { "_id": "A202", "title": "A5 QUERIES", "description": "Week 4 - QUERIES", "point":"100 pts","course": "course2" },
+
+
+
+  { "_id": "A101", "title": "A1 SETUP", "description": "Week 0 - SETUP","point":"100 pts", "course": "course3" },
+  { "_id": "A102", "title": "A2 HTML", "description": "Week 1 - HTML", "point":"100 pts","course": "course3" },
+  { "_id": "A103", "title": "A3 CSS", "description": "Week 2 - CSS", "point":"100 pts","course": "course3" },
+  { "_id": "A201", "title": "A4 BOOTSTRAP", "description": "Week 3 - Bootstrap", "point":"100 pts","course": "course3" }
+]

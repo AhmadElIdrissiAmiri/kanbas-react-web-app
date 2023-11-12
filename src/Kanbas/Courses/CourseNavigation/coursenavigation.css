@@ -1,0 +1,34 @@
+
+
+ .customList {
+   
+    margin-bottom: 5px;
+    list-style-type: none;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  .customListItem {
+    text-decoration: none;
+    color: red;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  
+  .customListItem.active {
+    text-decoration: none;
+    color:black;
+    font-size: 15px;
+    border-left: 3px solid transparent;
+    border-left-color: black;
+    padding-left: 8px;
+    background-color: white;
+  }
+
+  .eyeIcon{
+    float: right;
+  clear: both;
+  margin-top: 5px;
+  margin-left: 10px;
+  }

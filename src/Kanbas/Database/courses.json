@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "course1",
+    "name": "CS5610 SEC01 Web Development",
+    "number": "CS5610.14253.202310",
+    "term": "202310_1 Fall 2023 Full Term"
+  },
+  {
+    "_id": "course2",
+    "name": "CS5200 SEC03 Database Management",
+    "number": "CS5200.12563.202310",
+    "term": "202310_1 Fall 2023 Full Term"
+  },
+  {
+    "_id": "course3",
+    "name": "CS5004 SEC02 Object Oriented Design",
+    "number": "CS5004.18596.202310",
+    "term": "202310_1 Fall 2023 Full Term"
+  },
+  {
+    "_id": "course4",
+    "name": "CS5002 SEC01 Discreet Math",
+    "number": "CS5002.18593.202310",
+    "term": "202310_1 Fall 2023 Full Term"
+  },
+  {
+    "_id": "course5",
+    "name": "CS5100 SEC02 Introduction to Artificial Intelligence",
+    "number": "CS5100.15653.202310",
+    "term": "202310_1 Fall 2023 Full Term"
+  },
+  {
+    "_id": "course6",
+    "name": "CS7140 SEC01 Deep Learning",
+    "number": "CS7140.17853.202310",
+    "term": "202310_1 Fall 2023 Full Term"
+  },
+  {
+    "_id": "course7",
+    "name": "ENG3500 SEC02 Advanced Scientific Writing",
+    "number": "ENG3500.18596.202310",
+    "term": "202310_1 Fall 2023 Full Term"
+  }
+]

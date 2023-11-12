@@ -1,0 +1,48 @@
+/*First bar*/
+
+.custom-row1 {
+    height: 100vh;
+ 
+}
+
+
+
+.custom-col1 {
+    background-color: black;
+    max-width: 75px;
+    padding: 0px;
+    padding-right: 0;
+    padding-top: 5px;
+
+
+}
+
+
+.custom-row2 {
+    width: auto;
+    height: 70px;
+    align-items: center;
+    
+
+}
+
+.custom-row4 {
+
+
+    border: none;
+    border-bottom: RGB(220,220,220) solid 0.5px;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    width: 950px;
+
+
+
+}
+
+
+
+
+.d-flex{
+    height:100vh;
+}

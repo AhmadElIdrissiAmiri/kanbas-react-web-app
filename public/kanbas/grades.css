@@ -1,0 +1,212 @@
+/*sidebar*/
+.custom-row1 {
+    height: 100vh;
+
+}
+
+.northeasternIMG {
+    width: 100px;
+    max-width: 110px;
+    padding-right: 40px;
+
+}
+
+.custom-col1 {
+    background-color: black;
+    max-width: 75px;
+    padding: 0px;
+    padding-right: 0;
+    padding-top: 5px;
+
+
+}
+
+
+
+
+.custom-row2 {
+    width: auto;
+    height: 70px;
+    align-items: center;
+    
+
+
+
+}
+
+.custom-row2 i {
+    color: red;
+    font-size: 30px;
+    float: end;
+    margin-left: 10px;
+    margin-right: 25px;
+
+}
+
+.custom-row2 button {
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 40px;
+    padding-top: 5px;
+    margin-bottom: 0;
+    padding-bottom: 0px;
+    border: none;
+    border-bottom: RGB(220, 220, 220) solid 0.5px;
+    background-color: #fff;
+
+}
+
+
+.sidebar {
+    background-color: black;
+    width: 75px;
+    max-width: 85px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.sidebar-selected li {
+
+    background-color: white;
+    color: red;
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    width: 75px;
+    max-width: 85px;
+
+
+
+}
+
+.sidebar-unselected li {
+
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    display: block;
+
+    max-width: 100px;
+
+
+}
+
+.sidebar-unselected li i {
+
+    color: red;
+    display: block;
+    font-size: 20px;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+
+}
+
+.sidebar-selected li i {
+
+    color: black;
+    display: block;
+    font-size: 20px;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+
+.sidebar ul a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Second bar*/
+.accountNavigation {
+    width: 190px;
+    max-width: 200px;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+.accountNavigation ul li {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 2px 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+
+}
+
+.accountNavigation ul li a.accountNavigationSelected{
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+    border-left: 3px solid transparent;
+    border-left-color: black;
+    padding-left: 8px;
+
+}
+.accountNavigation ul li a.accountNavigationUNSelected{
+    text-decoration: none;
+    color:red;
+    font-size: 18px;
+
+}
+
+
+
+
+.breadcrumb a{
+    text-decoration: none; 
+    color: red; 
+    background-color: transparent; 
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+    font-size: 25px;
+}
+.breadcrumb-item{
+    text-decoration: none; 
+    color: red; 
+    background-color: transparent; 
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+}
+

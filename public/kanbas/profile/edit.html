@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>kanbas grades</title>
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row custom-row1">
+            <!-- First Column -->
+            <div class="col custom-col1  ">
+                <div class="sidebar">
+                    <ul>
+                        <a class="sidebar-unselected" href="#">
+                            <li class="listItems"><img class="northeasternIMG" src="../../images/neu.png"></li>
+                        </a>
+                        <a class="sidebar-selected" href="index.html">
+                            <li><i class="fas fa-user-circle"></i>
+                                Account</li>
+                        </a>
+
+                        <a class="sidebar-unselected" href="../Dashboard/dashboard.html">
+                            <li> <i class="fas fa-tachometer-alt"></i>
+                                Dashboard</li>
+                        </a>
+                        <a class="sidebar-unselected" href="../home.html">
+                            <li><i class="fas fa-book"></i>
+                                Courses</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="far fa-calendar-alt"></i>
+                                Calendar</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="fas fa-inbox"></i>
+                                Inbox</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="far fa-clock"></i>
+                                History</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="fas fa-desktop"></i>
+                                Studio</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="fas fa-long-arrow-alt-right"></i>
+                                Commons</li>
+                        </a>
+                        <a class="sidebar-unselected" href="#">
+                            <li><i class="far fa-question-circle"></i>
+                                Help</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- second Column -->
+            <div class="col custom-col2 ">
+                <!-- First row inside the second column -->
+                <div class="row custom-row2">
+                    <button type="button" >
+                        <i class="fas fa-bars"></i>Ahmad El Idrissi Amiri's Profile
+                    </button>
+                    <br />
+                </div>
+                <div class="row custom-row3">
+                    <div class="col custom-col3 ">
+                        <div class="accountNavigation">
+
+                            <ul>
+                                <li><a class="accountNavigationUNSelected" href="#">Notifications</a></li>
+                                <li><a class="accountNavigationSelected" href="index.html">Profile</a></li>
+                                <li><a class="accountNavigationUNSelected" href="#">Files</a></li>
+                                <li><a class="accountNavigationUNSelected" href="../settings/course_details.html">Settings</a></li>
+                                <li><a class="accountNavigationUNSelected" href="#">ePortfolios</a></li>
+                                <li><a class="accountNavigationUNSelected" href="#">Shared Content</a></li>
+                                <li><a class="accountNavigationUNSelected" href="#">The Hub</a></li>
+                                <li><a class="accountNavigationUNSelected" href="#">Quickly Course Tools</a></li>
+                                <li><a class="accountNavigationUNSelected" href="#">Global Announcements</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col custom-col4  d-none d-lg-block">
+                        <div class="float-end">       
+                            <a href="index.html"><button type="button" class="btn btn-light"><i
+                                class="fas fa-pen"></i> Cancel Editing</button></a>
+                            </div>
+                    <div class="user_icon">
+                        <i class="fas fa-user-circle"></i>
+                
+                        <br>
+                    </div>
+                    
+                    <label for="nameInput"><b>Name:*</b></label>
+                    <input class="form-control" type="text" id="nameInput" value="Ahmad El Idrissi Amiri">
+                    <div class="form-group">
+                        <label for="select-one-genre"><b>Pronouns:</b></label><br>
+                        <select class="form-select" id="Pronouns" style="width: 805px;">
+                            <option selected>None</option>
+                            <option value="1">They/Them</option>
+                            <option value="2">He/him/his</option>
+                            <option value="3">She/her/hers</option>
+                        </select>
+                    </div>
+                    <label><b>Title:</b></label>
+                    <input class="form-control" type="text"><br />
+                    <br />
+                    <div class="links_icons">
+                    <h3>Contact</h3>
+
+                    <p>No registered services,you can add some on the <a href="#">
+                            settings</a> page.</p>
+
+
+
+                    <h3>Biography</h3>
+                    <div class="form-group">
+                        <textarea class="form-control" id="biographyTextarea" cols="60" rows="3">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                    </div></br>
+                    <h3>Links</h3>
+                    <div class="row ">
+                        <div class="col text-center">
+                            <strong>Title</strong>
+                        </div>
+                        <div class="col text-center">
+                            <strong>URL</strong>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 ">
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Youtube">
+                        </div>
+                        <div class="col-sm-1 styleIcon">
+                        <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="col-lg-5 ">
+                            <input type="text" class="form-control" id="url" name="url" placeholder="Enter URL">
+                        </div>
+                        <div class="col-sm-1 styleIcon">
+                            <a href="#"><i
+                                class="fas fa-times" style="color: red;"></i></a>
+                        </div>
+                        
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-light">Add another link</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row justify-content-end">
+                        <div class="col-auto">
+                            <a href="index.html"><button type="button" class="btn btn-light">Cancel</button></a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="index.html"><button type="button" class="btn btn-danger">Save Profile</button></a>
+                        </div>
+                    </div>
+                    
+                        
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

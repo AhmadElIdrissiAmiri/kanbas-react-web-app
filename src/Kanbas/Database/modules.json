@@ -1,0 +1,104 @@
+[
+  {
+    "_id": "M101",
+    "name": "Resources",
+    "description": "Here are some of the useful resources",
+    "course": "course1"
+  },
+  {
+    "_id": "M102",
+    "name": "Required Textbook",
+    "description": "Find the required textbooks",
+    "course": "course1"
+  },
+  {
+    "_id": "M103",
+    "name": "Resources",
+    "description": "Here are some of the useful resources",
+    "course": "course2"
+  },
+  {
+    "_id": "M104",
+    "name": "Required Textbook",
+    "description": "Find the required textbooks",
+    "course": "course12"
+  },
+  {
+    "_id": "M105",
+    "name": "Resources",
+    "description": "Here are some of the useful resources",
+    "course": "course3"
+  },
+  {
+    "_id": "M106",
+    "name": "Required Textbook",
+    "description": "Find the required textbooks",
+    "course": "course3"
+  },
+  {
+    "_id": "M107",
+    "name": "Resources",
+    "description": "Here are some of the useful resources",
+    "course": "course4"
+  },
+  {
+    "_id": "M108",
+    "name": "Required Textbook",
+    "description": "Find the required textbooks",
+    "course": "course4"
+  },
+  {
+    "_id": "M201",
+    "name": "Week-0 INTRO",
+    "description": "Introduction to the course. Reading the syllabus",
+    "course": "course1"
+  },
+  {
+    "_id": "M202",
+    "name": "Week-1 HTML",
+    "description": "Learn how to create user interfaces with HTML",
+    "course": "course1"
+  },
+  {
+    "_id": "M203",
+    "name": "Week-2 CSS",
+    "description": "Learn CSS to style web pages",
+    "course": "course1"
+  },
+  {
+    "_id": "M301",
+    "name": "Week-0 INTRO",
+    "description": "Introduction to Database Management System",
+    "course": "course2"
+  },
+  {
+    "_id": "M302",
+    "name": "Week-1 Conceptual Design",
+    "description": "Learn how to design an ERD",
+    "course": "course2"
+  },
+  {
+    "_id": "M303",
+    "name": "Week-2 Intro to MySQL",
+    "description": "Introduction to MySQL. Download the latest version",
+    "course": "course2"
+  },
+  {
+    "_id": "M401",
+    "name": "Week-0 Intro",
+    "description": "Introduction to Object-Oriented Design",
+    "course": "course3"
+  },
+  {
+    "_id": "M402",
+    "name": "Week-1 Intro to Java",
+    "description": "Introduction to Java. Download the latest version",
+    "course": "course3"
+  },
+  {
+    "_id": "M403",
+    "name": "Week-2 Intro to Classes",
+    "description": "Introduction to classes and abstraction concepts",
+    "course": "course3"
+  }
+]
