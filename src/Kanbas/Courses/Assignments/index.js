@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { AiOutlinePlus, AiOutlineDown, AiOutlineRight } from "react-icons/ai";
 import db from "../../Database";
@@ -11,12 +11,36 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   addAssignment,
   deleteAssignment,
-  updateAssignment,
+   updateAssignment,
   setAssignment,
+  setAssignments,
 } from "./assignmentsReducer";
-
+import { findAssignmentForCourse , createAssignment} from "./client";
+import * as client from "./client";
 function Assignments() {
   const { courseId } = useParams();
+  useEffect(() => {
+    findAssignmentForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+    );
+  }, [courseId]);
+
+
+  const handleAddAssignment = () => {
+    createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+  };
+
+  const handleUpdateAssignment = async () => {
+    const status = await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
+  };
+
+
+
+
 
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
@@ -31,7 +55,9 @@ function Assignments() {
   const handleDeleteAssignment = (assignmentId) => {
     const confirmDelete = window.confirm("Are you sure you want to delete this assignment?");
     if (confirmDelete) {
-      dispatch(deleteAssignment(assignmentId));
+      client.deleteAssignment(assignmentId).then((status) => {
+        dispatch(deleteAssignment(assignmentId));
+      });
     }
   };
 
@@ -71,10 +97,10 @@ function Assignments() {
           } />
 
         <br />
-        <button className="btn btn-success" onClick={() => dispatch(addAssignment({ ...assignment, course: courseId }))}>
+        <button className="btn btn-success" onClick={handleAddAssignment}>
           Add
         </button>
-        <button className="btn btn-primary" onClick={() => dispatch(updateAssignment(assignment))}>
+        <button className="btn btn-primary" onClick={handleUpdateAssignment}>
           Update
         </button>
         <br />

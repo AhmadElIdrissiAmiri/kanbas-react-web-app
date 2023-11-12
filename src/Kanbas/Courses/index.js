@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import db from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams, useLocation, Link } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
@@ -9,13 +9,25 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import { LiaGlassesSolid } from 'react-icons/lia';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { FaFileImport, FaCloudDownloadAlt, FaHome, FaChartBar, FaVolumeUp, FaBell } from 'react-icons/fa';
-import Grades from "./Grades"
+import Grades from "./Grades";
+import axios from "axios";
 
 import "./courses.css";
 
-function Courses({ courses }) {
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   const [isCourseNavigationVisible, setIsCourseNavigationVisible] = useState(true);
   const toggleCourseNavigation = () => {
     setIsCourseNavigationVisible(!isCourseNavigationVisible);
