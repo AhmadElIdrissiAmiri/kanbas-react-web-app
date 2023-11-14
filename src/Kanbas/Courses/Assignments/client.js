@@ -9,18 +9,12 @@ export const deleteAssignment = async (assignmentId) => {
 };
 
 
-
-
 export const updateAssignment = async (assignment) => {
     const response = await axios.
       put(`${ASSIGNMENTS_URL}/${assignment._id}`, assignment);
     return response.data;
   };
   
-
-
-
-
 
 export const createAssignment = async (courseId, assignment) => {
     const response = await axios.post(
@@ -29,10 +23,6 @@ export const createAssignment = async (courseId, assignment) => {
     );
     return response.data;
   };
-  
-
-
-
 
 
 export const findAssignmentForCourse = async (courseId) => {

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { React, useState } from "react";
-import db from "../Database";
 import webImage from "./web.jpg";
 import dbmsImage from "./dbms1.png";
 import oodImage from "./ood.jpg";
@@ -15,7 +14,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
   deleteCourse, updateCourse }
 ) {
 
-
+ 
 
   const courseImages = {
     "CS5610 SEC01 Web Development": webImage,

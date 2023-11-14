@@ -1,7 +1,7 @@
 import React, {useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { AiOutlinePlus, AiOutlineDown, AiOutlineRight } from "react-icons/ai";
-import db from "../../Database";
+
 import "../courses.css";
 import { BsFillCheckCircleFill, BsGripVertical } from "react-icons/bs";
 import { GiNotebook } from "react-icons/gi";
@@ -11,7 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   addAssignment,
   deleteAssignment,
-   updateAssignment,
+  updateAssignment,
   setAssignment,
   setAssignments,
 } from "./assignmentsReducer";

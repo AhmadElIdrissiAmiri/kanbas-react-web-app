@@ -1,49 +1,70 @@
-import React ,{ useState }from "react";
-import { useNavigate, useParams, Link } from "react-router-dom";
-import db from "../../../Database";
-import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
+import React, { useEffect, useState } from "react";
+import { useParams, Link , useNavigate} from "react-router-dom";
+import { IoIosAdd, IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import { FaEllipsisV } from 'react-icons/fa';
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setAssignment,
+  setAssignments,
+  addAssignment,
+  deleteAssignment,
+  updateAssignment
+} from "../assignmentsReducer";
+import * as client from "../client";
+
+const ASSIGNMENTS_URL = "http://localhost:4000/api/assignments";
 
 function AssignmentEditor() {
-  const { assignmentId } = useParams();
-  const assignment = db.assignments.find(
-    (assignment) => assignment._id === assignmentId
-  );
+  const { assignmentId, courseId } = useParams();
+  const assignment = useSelector(state => state.assignmentsReducer.assignment);
+  const dispatch = useDispatch();
   const [title, setTitle] = useState(assignment.title);
-
-
-  const { courseId } = useParams();
   const navigate = useNavigate();
 
-  const handleSave = () => {
-    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
-  };
+  useEffect(() => {
+    if (assignmentId) {
+      client.findAssignmentForCourse(assignmentId).then(assignment => {
+        dispatch(setAssignment(assignment));
+      });
+    }
+  }, [assignmentId, dispatch]);
 
-  
+  const handleSave = async () => {
+    try {
+      if (assignmentId) {
+        await client.updateAssignment(assignment);
+        dispatch(updateAssignment(assignment));
+      } else {
+        const newAssignment = await client.createAssignment(courseId, assignment);
+        dispatch(addAssignment(newAssignment));
+      }
+    
+      navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+    } catch (error) {
+      console.error("Error saving assignment:", error);
+    }
+  };
 
   return (
     <div>
-     
-      <div style={{ float:"right"}}>
-     
-      <button type="button" className="btn btn-light btn-sm buttonStyle" style={{ width: "160px" }}>
-           <IoIosCheckmarkCircleOutline className="iconStyle1"  />Publish All
-          </button>
-          <button type="button" className="btn btn-light btn-sm buttonStyle" style={{ width: "10px" }}>
-             <FaEllipsisV className="iconStyle3" />
-          </button>
-          
-          </div>
-         
-          
-          <br/>
-          <hr/>
+      <div style={{ float: "right" }}>
+        <button type="button" className="btn btn-light btn-sm buttonStyle" style={{ width: "160px" }}>
+          <IoIosCheckmarkCircleOutline className="iconStyle1" />Publish All
+        </button>
+        <button type="button" className="btn btn-light btn-sm buttonStyle" style={{ width: "10px" }}>
+          <FaEllipsisV className="iconStyle3" />
+        </button>
+      </div>
+
+      <br />
+      <hr />
+
       <h6>Assignment Name</h6>
       <input
-  value={title}
-  onChange={(e) => setTitle(e.target.value)} 
-  className="form-control mb-2"
-/>
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        className="form-control mb-2"
+      />
 
       <div className="row">
         <div className="col-auto offset-sm-1">
@@ -60,6 +81,7 @@ function AssignmentEditor() {
           </select>
         </div>
       </div>
+
       <br />
       <br />
       <div className="row">
@@ -77,6 +99,7 @@ function AssignmentEditor() {
           </select>
         </div>
       </div>
+
       <br />
       <div className="row mb-3">
         <div className="col-sm-10 offset-sm-1">
@@ -88,8 +111,8 @@ function AssignmentEditor() {
           </div>
         </div>
       </div>
-      <br />
 
+      <br />
       <div className="row">
         <div className="col-auto offset-sm-1">
           <label htmlFor="Submission Type" className="col-form-label">
@@ -139,8 +162,8 @@ function AssignmentEditor() {
           </div>
         </div>
       </div>
-      <br />
 
+      <br />
       <div className="row">
         <div className="col-auto offset-sm-1">
           <label htmlFor="Assign" className="col-form-label">Assign</label>
@@ -182,7 +205,7 @@ function AssignmentEditor() {
                 </div>
               </div>
 
-              <button type="button" className="btn btn-se btn-sm">
+              <button type="button" className="btn btn-se btn-sm" onClick={addAssignment}>
                 <i
                   className="fa fa-plus"
                   aria-hidden="true"
@@ -194,6 +217,7 @@ function AssignmentEditor() {
           </div>
         </div>
       </div>
+
       <div className="row">
         <div className="form-check">
           <input className="form-check-input" type="checkbox" id="r6" />
@@ -202,13 +226,14 @@ function AssignmentEditor() {
           </label>
         </div>
       </div>
+
       <Link
         to={`/Kanbas/Courses/${courseId}/Assignments`}
-        className="btn btn-danger" style={{float:"right"}}
+        className="btn btn-danger" style={{ float: "right" }}
       >
         Cancel
       </Link>
-      <button onClick={handleSave} className="btn btn-success me-2" style={{float:"right"}}>
+      <button onClick={handleSave} className="btn btn-success me-2" style={{ float: "right" }}>
         Save
       </button>
     </div>
@@ -216,3 +241,5 @@ function AssignmentEditor() {
 }
 
 export default AssignmentEditor;
+
+

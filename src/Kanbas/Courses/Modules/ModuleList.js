@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { BsFillCheckCircleFill, BsGripVertical } from "react-icons/bs";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { AiOutlinePlus, AiOutlineDown, AiOutlineRight } from "react-icons/ai"; 
-import db from "../../Database";
 import "../courses.css";
 import { useSelector, useDispatch } from "react-redux";
 import {

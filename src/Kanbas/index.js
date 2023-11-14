@@ -2,7 +2,6 @@ import KanbasNavigation from "./KanbasNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
-import db from "./Database";
 import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
@@ -25,10 +24,12 @@ function Kanbas() {
     startDate: "2023-09-10", endDate: "2023-12-15", CourseImage: null,
   });
 
+ 
   const addNewCourse = async () => {
     const response = await axios.post(URL, course);
     setCourses([  
       ...courses,
+    
     {
       ...response.data,
       ...course,
@@ -41,28 +42,33 @@ function Kanbas() {
       `${URL}/${course._id}`
     );
 
-    setCourses(courses.filter((course) => course._id !== courseId));
+    setCourses(courses.filter(
+      (c) => c._id !== courseId));
+     
   };
 
 
 
-
-  const updateCourse = async () => {
+  const updateCourse = async (course) => {
     const response = await axios.put(
       `${URL}/${course._id}`,
       course
     );
-
+    
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
           return response.data;
-        } else {
-          return c;
         }
+        return c;
       })
     );
+   
   };
+
+
+
+
   return (
     <Provider store={store}>
 

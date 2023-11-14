@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import db from "../../Kanbas/Database";
+//import db from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams, useLocation, Link } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
@@ -33,7 +33,7 @@ function Courses() {
     setIsCourseNavigationVisible(!isCourseNavigationVisible);
   };
 
-  const status = db.status.filter((item) => item.course === courseId); 
+   //const status = db.status.filter((item) => item.course === courseId); 
 
   const location = useLocation();
   const currentPage = location.pathname.split("/").pop();
@@ -89,12 +89,7 @@ function Courses() {
         
         <hr />
         <h6>To Do</h6>
-        {status.map((item) => (
-          <div key={item._id}>
-            <h6 style={{color:"red"}}>{item.title}</h6>
-            <p><i>{item.description}</i></p>
-          </div>
-        ))}
+  
         <hr/>
       </div>
     </div>
@@ -102,3 +97,11 @@ function Courses() {
 }
 
 export default Courses;
+
+
+/*     {status.map((item) => (
+          <div key={item._id}>
+            <h6 style={{color:"red"}}>{item.title}</h6>
+            <p><i>{item.description}</i></p>
+          </div>
+        ))}*/
