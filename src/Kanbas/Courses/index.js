@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-//import db from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams, useLocation, Link } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";

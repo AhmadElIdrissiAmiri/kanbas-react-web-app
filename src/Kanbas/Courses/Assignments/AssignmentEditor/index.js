@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link , useNavigate} from "react-router-dom";
-import { IoIosAdd, IoIosCheckmarkCircleOutline } from 'react-icons/io';
+import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import { FaEllipsisV } from 'react-icons/fa';
 import { useSelector, useDispatch } from "react-redux";
 import {
   setAssignment,
-  setAssignments,
+
   addAssignment,
-  deleteAssignment,
+ 
   updateAssignment
 } from "../assignmentsReducer";
 import * as client from "../client";

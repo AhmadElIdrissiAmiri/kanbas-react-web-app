@@ -19,32 +19,40 @@ function Kanbas() {
     findAllCourses();
   }, []);
 
+
   const [course, setCourse] = useState({
     name: "New Course", number: "New Number", term: "Course Term",
     startDate: "2023-09-10", endDate: "2023-12-15", CourseImage: null,
   });
 
  
+  // const addNewCourse = async () => {
+  //   const response = await axios.post(URL, course);
+  //   setCourses([  
+  //     ...courses,
+    
+  //   {
+  //     ...response.data,
+  //     ...course,
+  //     _id: new Date().getTime()
+  //   }]);
+  // };
   const addNewCourse = async () => {
     const response = await axios.post(URL, course);
-    setCourses([  
+    setCourses([
+      response.data,
       ...courses,
-    
-    {
-      ...response.data,
-      ...course,
-      _id: new Date().getTime()
-    }]);
+    ]);
+    setCourse({ name: "" });
   };
 
-  const deleteCourse = async (courseId) => {
+
+  const deleteCourse = async (course) => {
     const response = await axios.delete(
       `${URL}/${course._id}`
     );
-
     setCourses(courses.filter(
-      (c) => c._id !== courseId));
-     
+      (c) => c._id !== course._id));
   };
 
 
@@ -54,7 +62,6 @@ function Kanbas() {
       `${URL}/${course._id}`,
       course
     );
-    
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
@@ -63,10 +70,8 @@ function Kanbas() {
         return c;
       })
     );
-   
+    setCourse({ name: "" });
   };
-
-
 
 
   return (
