@@ -1,0 +1,3 @@
+[submodule "kanbas-react-web-app"]
+	path = kanbas-react-web-app
+	url = https://github.com/AhmadElIdrissiAmiri/kanbas-react-web-app.git
