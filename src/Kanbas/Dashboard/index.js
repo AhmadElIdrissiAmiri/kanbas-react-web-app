@@ -14,7 +14,6 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
   deleteCourse, updateCourse }
 ) {
 
- 
 
   const courseImages = {
     "CS5610 SEC01 Web Development": webImage,
@@ -90,7 +89,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
           <button className="btn btn-primary" onClick={addNewCourse}>
             Add
           </button>
-          <button className="btn btn-success" onClick={updateCourse} >
+          <button className="btn btn-success" onClick={() => updateCourse(course)} >
             Update
           </button>
           <br/><br/>
@@ -120,7 +119,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                 <button className="btn btn-danger" style={{ float: "right" }}
                   onClick={(event) => {
                     event.preventDefault();
-                    deleteCourse(course._id);
+                    deleteCourse(course);
                   }}>
                   Delete
                 </button>
