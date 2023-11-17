@@ -7,6 +7,9 @@ const COURSES_URL = `${API_BASE}/courses`;
 
 
 
+
+
+
 export const deleteModule = async (moduleId) => {
   const response = await axios
     .delete(`${MODULES_URL}/${moduleId}`);
