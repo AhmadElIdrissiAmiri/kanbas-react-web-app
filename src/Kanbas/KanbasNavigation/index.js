@@ -10,9 +10,10 @@ import {AiFillClockCircle} from "react-icons/ai";
 import {AiOutlineDesktop} from "react-icons/ai";
 import {BsBoxArrowInRight} from "react-icons/bs";
 import {BiSolidHelpCircle} from "react-icons/bi";
+import { IoMdLogIn } from "react-icons/io";
 
 function KanbasNavigation() {
-  const links = ["Account", "Dashboard", "Courses", "Calendar", "Inbox", "History", "Studio", "Commons", "Help"];
+  const links = ["Account", "Dashboard", "Courses", "Calendar", "Inbox", "History", "Studio", "Commons", "Help", "signin","signup"];
   const linkToIconMap = {
     Account: <BiUserCircle />,
     Dashboard: <RiDashboard3Fill />,
@@ -23,6 +24,8 @@ function KanbasNavigation() {
     Studio: <AiOutlineDesktop />,
     Commons: <BsBoxArrowInRight />,
     Help: <BiSolidHelpCircle />,
+    signin: <IoMdLogIn />,
+    signup: <IoMdLogIn />,
   };
 
   const { pathname } = useLocation();
